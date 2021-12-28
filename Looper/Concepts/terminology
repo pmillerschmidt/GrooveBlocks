@@ -1,0 +1,10 @@
+Node = discrete physical element that represents a musical pattern, instrument or effect
+Instrument foundation = the block that plugs into the central unit and that nodes are plugged in to
+Looper Lounge = the space where loops are created using different foundations and nodes
+scene = musical snippet while it is in the looper Lounge
+bounce = a scene, or element of, when it is compressed and sent to the sequencer
+Ornament/topping/condiment = transition, FX clip or one shot that are used in the arrangement view
+but are not complete loops.
+Channel = horizontal region in sequencer to place bounced scenes or ornaments 
+Sequencer = arrangemnt and automation area 
+Step = column in sequencer to represent discrete moments 

@@ -1,0 +1,32 @@
+LOOPER LOUNGE 
+
+The looper lounge is a self-contained looping system that allows the user
+to play around with different instruments, sounds, effects and MIDI clips. 
+
+The central board is a raspberry pi that has a few different controls. It 
+has a loop length pot, a bpm pot a major/minor switch, a key pot and a meter
+switch (3/4 or 4/4). It also as buttons for start/pause and stop.
+
+Connected to the central unit are a series of "instruments" that are in 
+the form of Arduinos. They are plastic blocks with connectors that either
+snap or connect magnetically to the central unit, relaying serial data
+(though we will switch to I2C soon). There are mutiple different instruments, 
+drums, keys/pads, bass, lead. That is the starter kit. The instruments will 
+also have knobs that can affect overall volume of the track, but most automation
+will be handled in the arrangement view. 
+
+On top of each instrument come a few different nodes. These nodes are resistors
+that the Arduino reads and compiles. It then transmits a unique 3-digit code
+to the raspberry pi telling it which audio file to play. 
+
+There are there different node options: instrument, clip and effect, though
+more will be added. The instrument node tells the CPU which specific sound
+it wants to use (i.e. electric guitar vs acoustic, rhodes piano vs organ). 
+The effect can be reverb, delay, filter, overdrive, etc. The MIDI clip can be
+any particular MIDI pattern. The raspberry pi will have a file that has every
+specific combination of instrument/clip/effects and plays that unique file
+back. Hopefully, the effects will have pots on them that we can use to automate
+or change the effect, but we are not quite there yet. 
+
+
+The lights represent certain movements/character of the node.

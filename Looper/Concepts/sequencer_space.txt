@@ -1,0 +1,25 @@
+SEQUENCER SPACE
+
+The Sequencer Space is a multi-channel, multi-step sequencer capable of
+playing bounced scenes from the Looper Lounge and preset audio files
+(ex. transitions, drum loops, buildups, etc.)
+
+The Sequencer Space has four channels for synchronous audio playback, all
+of which run on their own threads. Each channel has a knob that 
+updates its corresponding channel's volume in live time. 
+
+Preset audio files or bounced audio scenes are placed in one or span across
+multiple steps in a channel. This is accomplished by having an incomplete 
+circuit in each position, and the movable audio files have unique resistor
+values that complete the circuits. These positions also connect to a microchip
+(MCP3008) that converts the analog signal from the resistor to a digital, readable
+value in the Rasberry Pi. This gives all the necessary identifiable information for
+a preset audio file or bounced scene(position, and unique resistor value).
+
+The goal of the Sequencer Space is to force the user to think about musical 
+composition beyond creating one catchy loop. Similair to conventional song
+writing, where there are several different sections, the Sequencer Space
+can order and mix the different musical moments into finished song. It is 
+very reminiscent of a DAW, and it is supposed to be, because playing with the
+Sequencer SPace will develop the users basic music production skillset necessary
+to use a more complicated DAW later on.
