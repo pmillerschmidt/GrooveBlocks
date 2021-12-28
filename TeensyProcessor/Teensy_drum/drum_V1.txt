@@ -1,0 +1,16 @@
+Teensy Drum machine 
+
+Two velocity sensitive pads for a 16-step sequencer. 
+Play/pause button, stop button and record button. Probably learn button later. 
+Two pots or REs to select sound and maybe an LCD or OLED screen. 
+16 neopixels to represent the sequence. 
+
+When record is played, you can play in the sounds you want and it will store 
+that. When you playback, it plays the loop you've created
+
+Questions:
+    Does it make more sense to play waveform or wav file from SD?
+    Will polyphonic playback allow for sounds to be played simultaneously?
+
+To do: 
+    create a sequencer object that has a BPM, timer, steps, channels
