@@ -1,0 +1,37 @@
+midi wrapper from abstraction to low level synthesizer
+
+1- what instrument is this for?
+2- what pitch? (this is only if it's not a percussive instrument)
+3- what velocity?
+
+the wrapper should handle channel switching instruments, making sure to only switch instruments
+which have no notes playing, etc.
+
+there also needs to be support for pitch bend, etc. but that can come later
+
+
+three things
+1. enum instrument list
+2. enum note list
+3. wrapper/other pojo-oriented classes that handles building midi events from instrument and pitch + velocity
+
+
+There should be a MIDIConstants class in midinotes, with all the constants needed so they aren't all over the place
+
+
+https://en.wikipedia.org/wiki/General_MIDI
+
+
+classes:
+MidiConstants (import from billthefarmers stuff)
+Notes (enum of notes and conversion to midi pitch byte based on octave)
+Instruments (enum of instruments)
+InstrumentEvent (instrument + note + velocity + exceptional-case-handler class)
+MidiEvent (literally just a 3 byte wrapper class)
+InstrumentPlayer (converts instrumentEvent into series of midiEvents)
+
+InstrumentPlayer (needs to be initialized to get the MIDI writer)
+
+
+
+for next time, change Notes from enum to pojo class, add in flat/sharp and static/instance translation support

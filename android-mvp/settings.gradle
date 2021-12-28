@@ -1,0 +1,3 @@
+include ':MidiDriver-1.18'
+include ':app'
+rootProject.name = "Tablet MVP"
